@@ -1,0 +1,2 @@
+##Find the directory eating space shows top 10 directories.. only goes 1 directory deep.
+du -kh --max-depth 1 | sort -rn | head -n 10
