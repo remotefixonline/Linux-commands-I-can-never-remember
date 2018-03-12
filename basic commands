@@ -3,3 +3,9 @@ du -kh --max-depth 1 | sort -rn | head -n 10
 
 ##output process to console and log file
 ./blahprogramname |& tee -a /home/user/filename.txt
+
+#list all vm's
+virsh list -all
+
+#start them
+virsh start vmname.whatever.com
