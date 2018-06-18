@@ -15,7 +15,7 @@ find . -type f -printf "%s\t%p\n" | sort -n | tail -10
 
 ##DANGERWILLROBINSON THIS DELETES THE FILES WITH THE EXTENSION SPECIFIED.  run it without the | xargs rm first to make sure its what you want
 ##to delete
-find -type f -name '*.PROCESSED' -mtime +15 | xargs rm
+find . -type f -name '*.PROCESSED' -mtime +15 | xargs rm
 
 
 ##fix kali repos if they jacked up.
