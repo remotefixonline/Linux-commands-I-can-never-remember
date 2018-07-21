@@ -1,0 +1,5 @@
+## first cd to the soure directory.
+cd /var/www/vhosts/
+find . -mtime -120 -type f | rsync -av --files-from=- . ubuntu@192.168.1.1.compute-1.amazonaws.com:/var/www/vhosts/
+
+##do --dry-run first.. ^ will sync any file 120 days old... i hope.
