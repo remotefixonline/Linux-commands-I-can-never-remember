@@ -23,3 +23,7 @@ find . -type f -name '*.PROCESSED' -mtime +15 | xargs rm
 ##fix kali repos if they jacked up.
 echo deb http://http.kali.org/kali kali-rolling main contrib non-free > /etc/apt/sources.list
 apt-get update && apt-get upgrade && apt-get dist-upgrade
+
+
+##find duplicate ip addresses on lan
+arp-scan 192.168.10.0/24 | cut -f1 | sort | uniq -d
